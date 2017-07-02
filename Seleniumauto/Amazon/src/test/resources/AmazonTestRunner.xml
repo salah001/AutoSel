@@ -12,10 +12,11 @@
 
     <test name = "Amazon Home">
         <classes>
-            <class name="home.LogIn"/>
+            <class name="home.ShoppingCart"/>
+           <!-- <class name="home.LogIn"/>
             <class name="home.SignOut"/>
             <class name="home.SearchItems"/>
-            <class name="home.VerifyAutosuggestion"/>
+            <class name="home.VerifyAutosuggestion"/> -->
         </classes>
     </test>
 
