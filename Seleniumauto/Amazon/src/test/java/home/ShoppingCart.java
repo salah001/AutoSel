@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import search.SearchPage;
+import search.SearchVerifyPage;
 import search.ShopCartPage;
 
 import java.io.IOException;
@@ -18,10 +18,10 @@ import java.util.List;
 public class ShoppingCart extends CommonAPI {
 
     @Test
-    public void testShoppingCart() {
+    public void testShoppingCart()throws IOException, InterruptedException {
         ApplicationLog.epicLogger("Epic: Search EC:1,2 <a https://peoplentch.atlassian.net/browse/GREEN-7> GREEN-7 </a>");
         ShopCartPage shopCartPage = PageFactory.initElements(driver, ShopCartPage.class);
-        SearchPage searchPage = PageFactory.initElements(driver, SearchPage.class);
+        SearchVerifyPage searchPage = PageFactory.initElements(driver, SearchVerifyPage.class);
 
         searchPage.clearSearchInput();
         searchPage.searchFor("java");
@@ -38,6 +38,7 @@ public class ShoppingCart extends CommonAPI {
         shopCartPage.clickOnFirstResult();
         shopCartPage.addItemToCart();
 
+        sleepFor(2);
         shopCartPage.clickOnShoppingCart();
 
 

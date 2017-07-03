@@ -15,7 +15,7 @@
             <class name="home.ShoppingCart"/>
            <!-- <class name="home.LogIn"/>
             <class name="home.SignOut"/>
-            <class name="home.SearchItems"/>
+            <class nahome.SearchVerifyItemsyItemstems"/>
             <class name="home.VerifyAutosuggestion"/> -->
         </classes>
     </test>

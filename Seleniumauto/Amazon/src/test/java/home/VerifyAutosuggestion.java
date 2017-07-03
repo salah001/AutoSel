@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import search.AutoSuggestion;
-import search.SearchPage;
 
 import java.io.IOException;
 import java.util.List;
@@ -22,9 +21,7 @@ public class VerifyAutosuggestion extends CommonAPI {
         ApplicationLog.epicLogger("Epic: Search EC:1,2 <a https://peoplentch.atlassian.net/browse/GREEN-7> GREEN-7 </a>");
         AutoSuggestion autoSuggestion = PageFactory.initElements(driver, AutoSuggestion.class);
 
-        //clear input search
         autoSuggestion.clearSearchInput();
-        //type "java"
         autoSuggestion.typeInSearch("java");
 
         try {
